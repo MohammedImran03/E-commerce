@@ -15,5 +15,5 @@ const styles = {
     noramlFlex:"flex items-center"
   };
   
-  export default styles;
+export default styles;
   

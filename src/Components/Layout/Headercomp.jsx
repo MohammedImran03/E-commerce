@@ -38,11 +38,7 @@ const Headercomp = () => {
 
 <div className='border-2 border-slate-300'>
 <Corosols/>
-
-
-
 </div>
-
     </div>
     </div>
   )

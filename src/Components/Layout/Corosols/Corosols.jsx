@@ -32,7 +32,7 @@ const Corosols = () => {
         <div className='flex' style={{backgroundColor:"rgb(77,210,253)"}}>
                 <div>
             <div className='text-xs md:text-3xl text-red-700 mx-2 my-2 font-title'>Multi-Vendor Platform</div> 
-            <div className='m-4 border-4'><img src={shoppingcart} className=''></img></div>
+            <div className='m-4 border-4'><img src={shoppingcart} className=''/></div>
             </div>
             </div>
         </div>
