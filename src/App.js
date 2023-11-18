@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from "react";
 import './App.css';
-
-function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {LoginPage,Signuppage,ActivationPage,HomePage} from "./Routes.js"; 
+import store from "./store";
+import {loadUser } from "./Redux/action/user";
+const App=()=>{
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <BrowserRouter>
+   <Routes>
+   <Route path="/" element={<HomePage />} />
+    <Route path="/signin" element={<LoginPage />}/>
+    <Route path="/sign-up" element={<Signuppage />}/>
+    <Route path="/activation/:activation_token" element={<ActivationPage />}/>
+   </Routes>
+   </BrowserRouter>
   );
 }
 
